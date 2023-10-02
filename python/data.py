@@ -6,9 +6,7 @@ n1 = input("Type a number: ")
 
 n2 = input("Type another number: ")
 
-if not n2.isdigit():
-    print("Enter only numbers please")
-    n2 = input("Type a number: ")
+
 
 sum = addTwo(n1, n2)
 
