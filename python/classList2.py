@@ -12,9 +12,11 @@ while studentName != 'X':
 
 numberStudents = len(class4B)
 
+#class4B.sort()
+
 print(f"There are now {numberStudents} students in Class 4B")
 
-action = input("Would you like to save the class to file? Enter Y or N: cls")
+action = input("Would you like to save the class to file? Enter Y or N: ")
 if (action == "Y"):
     fileName = os.path.join("D:\\Data\\clients\\screen4\\tutorials\\python\\", "Class4B.txt")
     classFile = open(fileName, 'w')
