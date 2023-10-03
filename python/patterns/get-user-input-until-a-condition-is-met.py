@@ -14,7 +14,7 @@ print("Enter shopping list items and X when finished")
 item = ''
 
 while item != 'X':
-    item = input("Enter name: ") 
+    item = input("Enter item: ") 
     #do not enter 'X'
     if item != "X":
         shoppingList.append(item)
