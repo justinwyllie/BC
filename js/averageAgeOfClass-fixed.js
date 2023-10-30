@@ -4,9 +4,16 @@ const prompt = require('prompt-sync')({sigint: true});
 let classAges = [];
 
 
-function averageAge()
+function averageAge(ages)
 {
-    
+    let total = 0;
+    const l = ages.length;
+    for (i = 0; i < l; i++)
+    {
+        total = total + ages[i];
+    }
+
+    return total / l;
 }
   
 
