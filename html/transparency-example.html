@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head>++
 <title>Dubai</title>
 
 <style>
@@ -18,21 +18,35 @@ body
 
 .smaller-img
 {
-    width: 500px;
+    width: 400px;
     height: auto;
 }
 
 </style>
 
-</head>
-<body>
+<script>
 
-<h1 class="center">My trip to Dubai</h1>
+function loadBackground(loc)
+{
+    var body = document.getElementById("main");
+    body.style.backgroundImage = "url('" + loc + ".jpg')";
+    document.getElementById("location").innerHTML = loc;
+
+}
+
+</script>
+
+</head>
+<body id="main">
+
+<h1 class="center">My trip to <span id="location">Dubai</span></h1>
 
 <div class="center">
-    <img src="justin3.png" class="smaller-img">
+    <img src="cat.jpeg" class="smaller-img">
 </div>
 
+<button onclick="loadBackground('Dubai')">Dubai</button>
+<button onclick="loadBackground('Florida')">Florida</button>
 
 </body>
 </html>
