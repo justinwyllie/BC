@@ -1,12 +1,13 @@
 classAges = []
 className = ''
 
-def averageAge():
-    
-
+def averageAge(ages):
+    total = 0
+    for age in ages:
+        total = total + age
+    return total / len(ages)
 
 className = input("Enter name of class: ")  
-
 
 inputAge = ''
 
