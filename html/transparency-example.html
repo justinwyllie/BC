@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Dubai</title>
+<title >Dubai</title>
 
 <style>
 
 body
 {
     background-image: url('dubai.jpg');
-    background-repeat: repeat;
+    background-repeat: no-repeat;
 }
 
 .center
@@ -22,15 +22,43 @@ body
     height: auto;
 }
 
+img
+{
+    opacity:  0.5;
+}
+
 </style>
 
 <script>
+
+function roar()
+{
+    document.getElementById("cat").src = "cat-red.png";
+
+    setTimeout(function() {
+        document.getElementById("cat").src = "cat.png";
+    }, 3000);
+    
+    var roar = new Audio('roar.mp3').play();
+    
+}
+
+/* proper way of doing it
+audioElement.addEventListener(
+  "ended",
+  () => {
+    playButton.dataset.playing = "false";
+  },
+  false,
+);
+*/
 
 function loadBackground(loc)
 {
     var body = document.getElementById("main");
     body.style.backgroundImage = "url('" + loc + ".jpg')";
     document.getElementById("location").innerHTML = loc;
+    document.title = loc;
 
 }
 
@@ -42,12 +70,13 @@ function loadBackground(loc)
 <h1 class="center">My trip to <span id="location">Dubai</span></h1>
 
 <div class="center">
-    <img src="cat.jpeg" class="smaller-img">
+    <img id="cat" src="cat.png" class="smaller-img">
 </div>
 
 <button onclick="loadBackground('Dubai')">Dubai</button>
 <button onclick="loadBackground('Florida')">Florida</button>
 <button onclick="loadBackground('Alaska')">Alaska</button>
+<button onclick="roar()">Miaow</button>
 
 </body>
 </html>
