@@ -2,14 +2,17 @@ const prompt = require('prompt-sync')({sigint: true});
 
 let classAges = [];
 
+
 function averageAge(ages)
 {
     let total = 0;
-    ages.forEach((age) =>
+    const l = ages.length;
+    for (i = 0; i < l; i++)
     {
-        total = total + age;
-    })
-    return total / ages.length;
+        total = total + ages[i];
+    }
+
+    return total / l;
 }
 
 const className = prompt("Enter name of class: ")  

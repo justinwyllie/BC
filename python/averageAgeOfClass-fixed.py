@@ -6,6 +6,8 @@ def averageAge(ages):
     for age in ages:
         total = total + age
     return total / len(ages)
+    
+
 
 className = input("Enter name of class: ")  
 
