@@ -1,8 +1,18 @@
 classAges = []
-className = ''
 
-def averageAge():
 
+
+def averageAge(classAges):
+
+
+    total = 0
+    for age in classAges:
+        total = total + age
+    result = total / len(classAges)
+
+
+    
+    return result
 
 
 className = input("Enter name of class: ")  
@@ -10,9 +20,9 @@ className = input("Enter name of class: ")
 
 inputAge = ''
 
-while inputAge != 'X':
-    inputAge = input("Enter age of students one by one and press X when finished: ")  
-    if (inputAge != 'X'):
+while inputAge != 'x':
+    inputAge = input("Enter age then x ")  
+    if (inputAge != 'x'): 
         inputAge = int(inputAge)
         classAges.append(inputAge)
 
