@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>CSS Positioning</title>
+    <style>
+
+        body
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            margin-bottom: 150px;
+        }
+
+        .pos-rel
+        {
+            position: relative;
+            top: -15px;
+            left: 20px;
+        }
+
+        .container
+        {
+            position: relative;
+            width: 400px;
+            height: 270px;
+            border-width: 1px;
+            border-color: #000000;
+        }
+
+        .square
+        {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 0.8em;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+
+        }
+
+        #square1
+        {
+            background-color: yellow;
+            top: 50px;
+            left: 50px;
+            z-index: 10;
+        }
+
+        #square2
+        {
+            background-color: pink;
+            top: 150px;
+            left: 150px;
+            z-index: 11;
+        }
+
+        .footer
+        {
+            position: fixed;
+            bottom: 0px;
+            background-color: #ffffff;
+            margin-top: 100px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>CSS Positioning</h1>
+    <p>
+        As well as styles (such as colours, text effects and so on) CSS can be used to control positioning on a page.
+    </p>
+    <p>
+        There are 4 main values for the position property:
+        <ul>
+            <li>absolute</li>
+            <li>fixed</li>
+            <li>relative</li>
+            <li>static</li>
+
+        </ul>
+    </p>
+    <p>
+        The 4 main types are explained below. However; you should also be aware that there is a propery 'float' which makes elements 'float' outside
+        of the normal flow. There are also systems for organising layout such as Flexbox and Grid. These will be covered separately.
+    </p>
+    <h3>Static</h3>
+    <p>
+        This is the default setting. In this mode elements on a page just flow, basically in the order they appear
+        in the html. You should understand that some elements are <span class="emph">block</span> elements and some 
+        are <span class="emph">inline.</span> A block element has a line-break underneath it. &lt;div&gt; is a block element.
+        &lt;span&gt;s are inline.
+    </p>
+    <h3>Relative</h3>
+    <p class="pos-rel">
+        This paragraph has a relative position set on it. You can examine the CSS and see how it works.
+    </p>
+    <p>
+        Question: when do you think Relative positioning would be helpful?
+    </p>
+
+    <h3>Absolute</h3>
+    <p>Absolute position is used to set elements to exact pixel coorindates - relative to the 'parent' 
+        element. The parent element must have position - even if only relative.
+    </p>
+    <div  class="container">
+            <div id="square1" class="square">
+                <span>Square 1</span>
+            </div>
+            <div id="square2" class="square">
+                <span>Square 2</span>
+            </div>
+    </div>
+    
+    <p>
+        Question: when do you think Absolute positioning would be helpful?
+    </p>
+
+    <div class="footer">
+        <h3>Fixed</h3>
+        <p>
+            Fixed position can be used to attach elements to the page in a fixed position.
+        </p>
+        <p>
+            Question: when do you think fixed position would be helpful?
+        </p>
+    </div>
+    
+</body>
+</html>

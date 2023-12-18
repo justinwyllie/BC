@@ -20,3 +20,17 @@ while not n2.isdigit():
 sum = addTwo(n1, n2)
 
 print("The sum is: ", sum)
+
+
+##simple example unit test for function addTwo 
+
+def testAddTwo():
+    print("Run Tests")
+    testResult = addTwo(2, 2)
+    #assertion
+    if (testResult == 4):
+        print("OK")
+    else:
+        print("TEST FAILED")
+
+testAddTwo()

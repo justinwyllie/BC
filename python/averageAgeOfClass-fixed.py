@@ -11,7 +11,6 @@ def averageAge(ages):
 
 className = input("Enter name of class: ")  
 
-
 inputAge = ''
 
 while inputAge != 'X':
