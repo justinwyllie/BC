@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>CSS Animations</title>
+
+    <script>
+
+        function go()
+        {
+
+            
+        }
+
+
+    </script>
+
+    <style>
+
+        @keyframes go {
+            from {left: 10px;}
+            to {left: 800px;}
+        }
+
+
+        .box
+        {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div id="box" class="box">
+
+    </div>
+
+    <button onclick="go()">Let's Go</button>
+    
+</body>
+</html>
