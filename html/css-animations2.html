@@ -8,7 +8,12 @@
 
         function go()
         {
-
+            
+            el = document.getElementById('box');
+            
+            el.classList.add('anim');
+            setTimeout(function() {window.location.reload();}, 5100);
+            
             
         }
 
@@ -17,9 +22,21 @@
 
     <style>
 
+        .anim
+        {
+            animation-name: go;
+        }
+
         @keyframes go {
             from {left: 10px;}
-            to {left: 800px;}
+            10% {left: 100px; top: 100px;}
+            50% {left: 500px; top: 200px;}
+            75% {left: 300px; top: 100px;}
+            to {left: 10px; top: 10px;}
+        }
+
+        @keyframes blank {
+          
         }
 
 
@@ -31,6 +48,14 @@
             position: absolute;
             top: 10px;
             left: 10px;
+            animation-duration: 5s;
+        }
+
+        .panel
+        {
+            position: absolute;
+            top: 200px;
+            left: 10px; 
         }
 
     </style>
@@ -38,11 +63,18 @@
 </head>
 <body>
 
-    <div id="box" class="box">
+    <div class="container">
+
+        <div id="box" class="box">
+
+        </div>
 
     </div>
 
-    <button onclick="go()">Let's Go</button>
+
+    <div class="panel">
+        <button onclick="go()">Let's Go</button>
+    </div>
     
 </body>
 </html>
