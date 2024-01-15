@@ -8,8 +8,8 @@ $data["errors"] = implode("-",$data["errors"]);
 
 $email_data = <<<EOT
 name: {$data["name"]}
-tea: {$data["tea"]}
-coffee: {$data["coffee"]}
+drink: {$data["drink"]}
+food: {$data["food"]}
 EOT;
 
 $res = mail('justinwyllie@hotmail.co.uk', "Menu Order", $email_data);
